@@ -1,13 +1,13 @@
 import React from "react";
-import logo from "./assets/react.png"
 
-function Card() {
+function Card(props) {
     return <>
-        <div className="border border-black rounded-sm w-50 h-50 m-2.5"   >
+        <div className="border bg-gray-900 text-white border-black rounded-sm w-50 h-60 m-2.5"   >
             <div className="flex items-center justify-center w-full h-5/6">
-                <img src={logo} width="75%" alt="logo" />
+                <img src={props.src} width="75%" alt="logo" />
             </div>
-            <p className="text-center">Here is a sample logo.</p>
+            <p className="text-center">{props.title}</p>
+            <p className="text-center text-sm">{props.desc}</p>
         </div>
     </>
 }
