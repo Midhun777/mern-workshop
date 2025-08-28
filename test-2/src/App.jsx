@@ -1,29 +1,24 @@
 import React from "react";
 import Header from "./Header";
 import Card from "./Card";
-import reactLogo from "./assets/react.png";
-import nodeLogo from "./assets/node.png";
-import expressLogo from "./assets/express.png";
+import contactsArr from "./contacts";
+import Heading from "./Heading";
 
+function createCard(cardItem) {
+    return <Card
+        src={cardItem.src}
+        title={cardItem.title}
+        desc={cardItem.desc}
+    />
+}
 
 function App() {
     return <>
         <Header />
-        <Card
-            src={reactLogo}
-            title="React"
-            desc="Frontend"
-        />
-        <Card
-            src={nodeLogo}
-            title="NodeJs"
-            desc="Backend"
-        />
-        <Card
-            src={expressLogo}
-            title="ExpressJs"
-            desc="Middleware"
-        />
+        <Heading />
+        <div className="flex gap-4 justify-around mt-6">
+        {contactsArr.map(createCard)}
+        </div>
     </>
 }
 
