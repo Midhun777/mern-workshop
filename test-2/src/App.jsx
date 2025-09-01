@@ -5,8 +5,6 @@ import Card from "./Card";
 import Heading from "./Heading";
 import notesData from "./notesData";
 
-
-
 function App() {
     return <>
         <Header />
