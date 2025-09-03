@@ -1,5 +1,7 @@
 export default function App() {
   return <div>
-    <p className="bg-red-500">Hello World!!!</p>
+    <nav>
+    <p className="border border-black">Keeper</p>
+    </nav>
   </div>
 }
